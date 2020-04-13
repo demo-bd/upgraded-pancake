@@ -29,3 +29,12 @@ jobs:
     - run: npm test
       env:
         CI: true
+        
+  docker-build:    
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: docker/build-push-action@v1
+        with:
+          repository: demo-bd/upgraded-pancake
+          tags: latest
+          push: false
