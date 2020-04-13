@@ -37,6 +37,5 @@ jobs:
         with:
           repository: demo-bd/upgraded-pancake
           tags: latest
-          path: build
-          dockerfile: Dockerfile
+          dockerfile: build/Dockerfile
           push: false
