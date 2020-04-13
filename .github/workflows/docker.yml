@@ -1,0 +1,18 @@
+name: Docker CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  docker-build:    
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: docker/build-push-action@v1
+        with:
+          repository: demo-bd/upgraded-pancake
+          tags: latest
+          dockerfile: build/Dockerfile
+          push: false
